@@ -1,6 +1,8 @@
 # Módulo 08 — Planeamento, Simulação e Mini-Projeto
 
-**UC:** Redes Sem Fios e de Sensores · **Fase:** 4 — Projeto e avaliação
+**UC:** Redes Sem Fios e de Sensores · **Docente:** Rui Paulo · **Semanas:** 6–14
+
+> Alinhado com o [PLANO-SEMANAL](../PLANO-SEMANAL.md) e o [cenário âncora agrícola](../cenario-ancora-agricola.md).
 
 ## Objetivos de aprendizagem
 
@@ -138,55 +140,89 @@ cd contiki-ng/tools/cooja
 
 ---
 
-## 5. Mini-projeto — directrizes
+## 5. Mini-projeto — enunciado oficial (Prof. Rui Paulo)
 
-### Estrutura sugerida (relatório)
+### Enunciado
 
-1. **Introdução** — problema, objectivos, contribuição
-2. **Estado da arte** — tecnologias/protocolos relevantes
-3. **Cenário** — topologia, parâmetros, ferramenta
-4. **Implementação** — configuração, código, desafios
-5. **Resultados** — gráficos, tabelas, análise
-6. **Conclusão** — respostas às questões, limitações
-7. **Referências** — IEEE, IETF RFCs, artigos
+> Projetar e avaliar (por simulação em **Cooja** ou análise fundamentada) uma rede de sensores para o **cenário âncora** (monitorização agrícola no Algarve), justificando:
+> - tecnologia de acesso
+> - topologia
+> - protocolo de encaminhamento
+> - protocolo aplicacional
+>
+> Com análise de compromissos **energia / latência / fiabilidade**.
 
-### Exemplos de temas
+**Âmbito RSFS:** rede até ao gateway. Integração cloud/broker/JSON → UC IoT.
 
-| Tema | Ferramenta |
-|------|------------|
-| Comparação RPL OF0 vs. MRHOF em WSN | Cooja |
-| LoRaWAN ADR vs. SF fixo — alcance e energia | NS-3 |
-| Wi-Fi vs. 802.15.4 para smart building | NS-3 |
-| Impacto duty cycle em lifetime WSN | Cooja |
-| NB-IoT vs. LoRaWAN — estudo de caso agriculture | Analítico + NS-3 |
-| BLE mesh vs. ZigBee — latência e overhead | OMNeT++ / prática |
+### Marcos
 
-### Critérios de avaliação (referência)
+| Marco | Semana | Entregável |
+|-------|--------|------------|
+| Lançamento | 6 | Leitura do enunciado + ideias iniciais |
+| **Proposta** | **8** | Documento 2–3 págs.: tecnologia, topologia, protocolos, métricas |
+| Acompanhamento | 9–13 | Progresso nas PL (Cooja, resultados parciais) |
+| **Entrega final** | **14** | Relatório + apresentação/discussão |
+
+Realização **individual ou em pares** (a confirmar após 3.ª fase).
+
+### Grelha de avaliação (35% da nota final)
 
 | Critério | Peso |
 |----------|------|
-| Fundamentação técnica | 30% |
-| Metodologia e rigor | 25% |
-| Resultados e análise | 25% |
-| Apresentação e clareza | 10% |
-| Defesa oral | 10% |
+| Fundamentação técnica | **40%** |
+| Resultados / análise | **30%** |
+| Relatório | **20%** |
+| Apresentação / discussão | **10%** |
+
+### Estrutura sugerida da proposta (Semana 8)
+
+1. Descrição do cenário e requisitos (RF/RNF)
+2. Tecnologia de acesso escolhida + alternativas descartadas
+3. Topologia (diagrama) e nº de nós
+4. Protocolo de encaminhamento (ex.: RPL, flooding, estrela LoRaWAN)
+5. Protocolo aplicacional até ao gateway (CoAP, MQTT-SN, etc.)
+6. Métricas a medir e hipóteses
+7. Plano de simulação Cooja (ou metodologia analítica)
+
+### Estrutura sugerida do relatório final
+
+1. **Introdução** — problema, objectivos, contribuição
+2. **Estado da arte** — tecnologias/protocolos relevantes (D&P, RFCs)
+3. **Cenário** — topologia, parâmetros, ferramenta
+4. **Implementação** — configuração Cooja, desafios
+5. **Resultados** — gráficos PDR, energia, latência, overhead
+6. **Análise de trade-offs** — energia vs. latência vs. fiabilidade
+7. **Conclusão** — respostas às questões, limitações
+8. **Referências** — IEEE, IETF RFCs, artigos
+
+### Exemplos de abordagens válidas
+
+| Abordagem | Ferramenta | Foco |
+|-----------|----------|------|
+| Malha 802.15.4 + RPL vs. estrela | Cooja | PDR, energia, saltos |
+| Agregação vs. envio directo | Cooja | Tráfego, lifetime |
+| LoRaWAN SF7 vs. SF12 | Análise + calculadora | Airtime, bateria, alcance |
+| CoAP vs. MQTT-SN no gateway | Wireshark + análise | Overhead, latência |
 
 ---
 
-## 6. Estudo de caso: smart agriculture
+## 6. Estudo de caso: cenário âncora agrícola (Algarve)
 
-### Requisitos
+Ver documento completo: [cenario-ancora-agricola.md](../cenario-ancora-agricola.md)
 
-- 50 sensores humidade/temperatura, 500 m × 500 m
-- Leitura a cada 15 min, bateria 2 anos
-- Gateway com backhaul 4G
+### Resumo
 
-### Análise
+- 20–50 nós: humidade solo, temperatura, luminosidade
+- Leitura a cada 15 min, autonomia ≥ 2 anos
+- Parcela 1–5 ha, alcance nó→gateway ≤ 200 m
+- Gateway como border router (6LoWPAN) ou LoRaWAN concentrador
 
-1. **Link budget:** LoRa SF10 → alcance ~5 km ✓
-2. **Energia:** duty cycle 0.1% → lifetime > 2 anos ✓
-3. **Backend:** LoRaWAN → MQTT → cloud dashboard
-4. **Alternativa:** NB-IoT se cobertura operador disponível
+### Análise rápida
+
+1. **Link budget:** validar com Python (sem. 2) antes de simular
+2. **Topologia:** malha RPL se 802.15.4; estrela se LoRaWAN
+3. **Agregação:** 4 leituras/pacote reduz tráfego ~75% (testar sem. 9)
+4. **Backend:** fora do âmbito RSFS — referir apenas interface no gateway
 
 ---
 

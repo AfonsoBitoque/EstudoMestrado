@@ -1,6 +1,8 @@
 # Módulo 01 — Enquadramento e Aplicações
 
-**UC:** Redes Sem Fios e de Sensores · **Fase:** 1 — Fundamentos
+**UC:** Redes Sem Fios e de Sensores · **Semana 1** · **Leitura prévia:** D&P cap. 1
+
+> Segue o [PLANO-SEMANAL](../PLANO-SEMANAL.md). PL desta semana: setup Wireshark, Python, Cooja + escolha do [cenário âncora](../cenario-ancora-agricola.md).
 
 ## Objetivos de aprendizagem
 
@@ -8,6 +10,30 @@
 - Identificar domínios de aplicação e requisitos típicos
 - Analisar restrições de dispositivos restritos (constrained devices)
 - Compreender a arquitetura em camadas da IoT
+
+---
+
+## 0. Formato desta UC e fronteira com IoT
+
+### Formato seminário (turma pequena)
+
+- **Teóricas:** lês D&P/G **antes** da aula; a sessão é discussão guiada, não exposição longa
+- **PL:** guião curto, execução em bancada, docente circula e faz perguntas
+- **Mini-projeto:** espinha dorsal da 2.ª metade (semanas 6–14)
+
+### RSFS vs. Internet das Coisas (UC 14741088)
+
+| RSFS (esta UC) | IoT (outra UC) |
+|----------------|----------------|
+| Rede **até ao gateway** | Integração aplicacional completa |
+| Análise de protocolos (overhead, energia, fiabilidade) | Clientes, brokers, JSON, edge, cloud |
+| Wireshark, Cooja, link budget | Implementação full-stack dispositivo→nuvem |
+
+### Cenário âncora do semestre
+
+**Monitorização agrícola no Algarve** — sensores de humidade, temperatura e luminosidade numa parcela rural. Usa este cenário em todas as PLs e no mini-projeto.
+
+Detalhes: [cenario-ancora-agricola.md](../cenario-ancora-agricola.md)
 
 ---
 

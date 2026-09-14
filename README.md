@@ -12,7 +12,7 @@ Documentação **original** de apoio ao estudo — roadmaps, explicações, exer
 | Internet das Coisas | 14741088 | 6 | [semestre-1/internet-das-coisas](./semestre-1/internet-das-coisas/) |
 | Modelação e Integração de Dados | 14741095 | 6 | [semestre-1/modelacao-integracao-dados](./semestre-1/modelacao-integracao-dados/) |
 | Criptografia Moderna | 14741103 | 6 | [semestre-1/criptografia-moderna](./semestre-1/criptografia-moderna/) |
-| Redes Sem Fios e de Sensores | 14741087 | 6 | [semestre-1/redes-sem-fios-sensores](./semestre-1/redes-sem-fios-sensores/) |
+| Redes Sem Fios e de Sensores | 14741087 | 6 | [semestre-1/redes-sem-fios-sensores](./semestre-1/redes-sem-fios-sensores/) ([plano semanal do docente](./semestre-1/redes-sem-fios-sensores/PLANO-SEMANAL.md)) |
 
 ## Como usar
 

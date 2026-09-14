@@ -1,0 +1,18 @@
+# Documentos oficiais da universidade — NÃO publicar
+*.pdf
+uploads/
+f1*.pdf
+f2*.pdf
+f3*.pdf
+f4*.pdf
+f5*.pdf
+**/fuc/
+**/*-fuc.*
+
+# Ficheiros temporários
+.DS_Store
+*.swp
+*~
+.env
+__pycache__/
+node_modules/

@@ -6,6 +6,9 @@ f2*.pdf
 f3*.pdf
 f4*.pdf
 f5*.pdf
+plano_*.pdf
+plano-*.pdf
+**/*RSFS*.pdf
 **/fuc/
 **/*-fuc.*
 

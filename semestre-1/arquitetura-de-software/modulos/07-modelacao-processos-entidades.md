@@ -1,8 +1,21 @@
 # Módulo 07 — Modelação de Processos e Entidades
 
+> **ArchiMate:** [Part II — Business/Application elements](https://archimate-community.pages.opengroup.org/workgroups/archimate-101/) · [Guia](../ARCHIMATE-GUIA.md) · VP: [Information Structure example](https://online.visual-paradigm.com/diagrams/tutorials/archimate-tutorial/)
+
 ## Introdução
 
-Modelar processos e entidades de informação é ponte entre o mundo do negócio e a implementação software. **BPMN** (Business Process Model and Notation) permite representar fluxos operacionais; **modelação de entidades** captura a estrutura conceptual da informação empresarial. Este módulo introduz fundamentos de ambas as notações e a sua relação com arquitectura de software.
+Modelar processos e entidades de informação é ponte entre o mundo do negócio e a implementação software. **BPMN** (Business Process Model and Notation) permite representar fluxos operacionais com detalhe; **ArchiMate** modela processos e entidades ao nível EA; **modelação de entidades** captura a estrutura conceptual da informação empresarial. Este módulo introduz fundamentos de ambas as notações e a sua relação com arquitectura de software.
+
+### BPMN vs ArchiMate (processos)
+
+| | **BPMN** | **ArchiMate Business Process** |
+|---|----------|----------------------------------|
+| Detalhe | Alto (gateways, eventos, lanes) | Overview (coerência EA) |
+| Público | Analistas, BPMS, developers | Stakeholders diversos, EA |
+| Executável | Sim (XML → engine) | Não — liga a detalhe via viewpoints |
+| Quando | Automatizar/optimizar fluxo | Comunicar impacto arquitectural |
+
+**Workflow:** ArchiMate para visão EA → BPMN para 1–2 processos críticos → ArchiMate para interligar a aplicações (módulo 08).
 
 ## BPMN — Fundamentos
 

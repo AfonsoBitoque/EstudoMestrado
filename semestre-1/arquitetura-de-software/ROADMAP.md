@@ -1,7 +1,9 @@
 # Roadmap — Arquitetura de Software
 
-**UC:** 14741096 · **ECTS:** 6 · **Língua:** Inglês  
+**UC:** 14741096 · **ECTS:** 6 · **Docente:** Marielba Silva de Zacarias · **Língua:** Inglês  
 **Pré-requisitos recomendados:** Programação Imperativa, POO, Engenharia de Software, Análise e Modelação de Sistemas
+
+> **Modelação EA:** segue o [ARCHIMATE-GUIA.md](./ARCHIMATE-GUIA.md) com os recursos oficialmente indicados pela professora.
 
 ## Objetivos de aprendizagem (resumo)
 
@@ -34,24 +36,26 @@
 
 **Checkpoint:** Desenhar diagrama C4 (nível 2) para um sistema simples.
 
-### Fase 3 — Arquitetura empresarial (Semanas 4–5)
+### Fase 3 — Arquitetura empresarial + ArchiMate (Semanas 4–5)
 
-| Ordem | Módulo | Objetivos | Tempo sugerido |
-|-------|--------|-----------|----------------|
-| 4 | [04-arquitetura-empresarial](./modulos/04-arquitetura-empresarial.md) | O2 | 4–6 h |
-| 5 | [05-processos-negocio-informacao](./modulos/05-processos-negocio-informacao.md) | O2, O6 | 5–7 h |
+| Ordem | Módulo | Objetivos | Leitura ArchiMate | Tempo |
+|-------|--------|-----------|-------------------|-------|
+| 4 | [04-arquitetura-empresarial](./modulos/04-arquitetura-empresarial.md) | O2 | [ArchiMate 101 — Part I](https://archimate-community.pages.opengroup.org/workgroups/archimate-101/) + [VP Tutorial](https://online.visual-paradigm.com/diagrams/tutorials/archimate-tutorial/) | 5–7 h |
+| 5 | [05-processos-negocio-informacao](./modulos/05-processos-negocio-informacao.md) | O2, O6 | ArchiMate 101 — Part II (Business layer) | 5–7 h |
 
-**Checkpoint:** Identificar as 4 dimensões EA num caso fictício de e-commerce.
+**Checkpoint:** Diagrama ArchiMate 3 camadas (Business → Application → Technology) com ≥5 elementos e legenda.
 
-### Fase 4 — Alinhamento e interligação (Semanas 6–7)
+Ver percurso detalhado: [ARCHIMATE-GUIA.md](./ARCHIMATE-GUIA.md)
 
-| Ordem | Módulo | Objetivos | Tempo sugerido |
-|-------|--------|-----------|----------------|
-| 6 | [06-alinhamento-arquiteturas](./modulos/06-alinhamento-arquiteturas.md) | O3 | 4–5 h |
-| 7 | [07-modelacao-processos-entidades](./modulos/07-modelacao-processos-entidades.md) | O6, O7 | 6–8 h |
-| 8 | [08-interligacao-arquiteturas](./modulos/08-interligacao-arquiteturas.md) | O3, O6, O7 | 5–7 h |
+### Fase 4 — Alinhamento, processos e interligação ArchiMate (Semanas 6–7)
 
-**Checkpoint:** Mapear um processo BPMN para componentes de uma arquitetura em camadas.
+| Ordem | Módulo | Objetivos | Leitura ArchiMate | Tempo |
+|-------|--------|-----------|-------------------|-------|
+| 6 | [06-alinhamento-arquiteturas](./modulos/06-alinhamento-arquiteturas.md) | O3 | ArchiMate 101 — Part III (methodology) | 4–5 h |
+| 7 | [07-modelacao-processos-entidades](./modulos/07-modelacao-processos-entidades.md) | O6, O7 | Part II + VP exemplos Business Actor | 6–8 h |
+| 8 | [08-interligacao-arquiteturas](./modulos/08-interligacao-arquiteturas.md) | O3, O6, O7 | Part IV (viewpoints) + relações serving | 5–7 h |
+
+**Checkpoint:** Viewpoint ArchiMate que liga 1 Business Process a Application Components (interligação C8).
 
 ### Fase 5 — Aplicação e tendências (Semanas 8–10)
 
@@ -83,8 +87,17 @@
 - **50%** teórica: apresentações (15%), testes (30%), participação (5%)
 - **50%** prática: projeto em grupo com defesa individual
 
-## Ligações úteis (públicas)
+## Recursos oficiais da UC (modelação)
+
+| Recurso | URL |
+|---------|-----|
+| **ArchiMate 101** (The Open Group) | https://archimate-community.pages.opengroup.org/workgroups/archimate-101/ |
+| **When (not) using ArchiMate?** | https://archimate-community.pages.opengroup.org/workgroups/archimate-101/#_when_not_using_archimate |
+| **ArchiMate Tutorial** (Visual Paradigm) | https://online.visual-paradigm.com/diagrams/tutorials/archimate-tutorial/ |
+| **Guia de estudo integrado** | [ARCHIMATE-GUIA.md](./ARCHIMATE-GUIA.md) |
+
+## Outras ligações
 
 - [C4 Model](https://c4model.com/)
-- [Arcitura — Architecture Patterns](https://www.arcitura.com/)
+- [Archi — modeling tool](https://www.archimatetool.com/)
 - [TOGAF — The Open Group](https://www.opengroup.org/togaf)

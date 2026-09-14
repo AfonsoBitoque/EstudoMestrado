@@ -1,8 +1,38 @@
 # Módulo 04 — Arquitetura Empresarial
 
+> **Leitura prévia (professora):** [ArchiMate 101 — Part I](https://archimate-community.pages.opengroup.org/workgroups/archimate-101/) · [Visual Paradigm ArchiMate Tutorial](https://online.visual-paradigm.com/diagrams/tutorials/archimate-tutorial/) · [Guia de estudo](../ARCHIMATE-GUIA.md)
+
 ## Introdução
 
 Enquanto a arquitectura de software foca sistemas individuais, a **Arquitetura Empresarial (Enterprise Architecture — EA)** abrange a totalidade dos activos de TI e o seu alinhamento com a estratégia de negócio da organização. EA fornece uma visão holística que permite decisões coerentes em projectos dispersos, evitando silos e redundâncias. Este módulo define EA, apresenta frameworks reconhecidos (TOGAF, Zachman) e explora as dimensões fundamentais da arquitectura empresarial.
+
+## ArchiMate — linguagem de EA (recurso oficial)
+
+**ArchiMate** é a notação recomendada pela professora para modelar EA. O [ArchiMate 101](https://archimate-community.pages.opengroup.org/workgroups/archimate-101/) descreve-a como *"a foreign language for Enterprise Architecture"* — uma linguagem comum para comunicar com stakeholders.
+
+### Porquê ArchiMate?
+
+- Comunicação é >50% do trabalho de EA
+- Linguagem partilhada entre negócio, TI e parceiros
+- Viewpoints (ISO 42010) para diferentes audiências
+- Análise e gap analysis sobre o modelo
+
+### Quando (não) usar ArchiMate
+
+| Usar | Não usar |
+|------|----------|
+| Visão de conjunto EA | Detalhe de código/classes |
+| Alinhar negócio–aplicação–tech | Processos executáveis (→ BPMN) |
+| Decisões e gap analysis | Deployment de rede detalhado |
+| Interligação entre camadas | Diagrama só para 1 equipa dev (→ C4) |
+
+### Três camadas core
+
+1. **Business** — actors, roles, processes, business services, business objects
+2. **Application** — components, application services, data objects
+3. **Technology** — nodes, devices, system software, technology services
+
+Camada superior **usa** (*serving*) serviços da inferior. Tutorial visual: [Visual Paradigm — Core Layers](https://online.visual-paradigm.com/diagrams/tutorials/archimate-tutorial/).
 
 ## Definição de Arquitetura Empresarial
 
@@ -57,6 +87,20 @@ Templates e deliverables padronizados (catalogues, matrices, diagrams) produzido
 
 ### Enterprise Continuum
 Repositório de activos arquitecturais reutilizáveis — desde patterns genéricos até soluções específicas da organização.
+
+### TOGAF ADM + ArchiMate
+
+O tutorial Visual Paradigm mapeia fases ADM a elementos ArchiMate:
+
+| Fase ADM | Camada ArchiMate |
+|----------|------------------|
+| B — Business Architecture | Business layer |
+| C — Information Systems | Application layer + data |
+| D — Technology Architecture | Technology layer |
+| E–G — Migration | Implementation & Migration extension |
+| Vision, Requirements | Motivation extension (Goals, Drivers) |
+
+ArchiMate cobre os **artefactos visuais** do ADM; documentação textual (logs, atas) fica fora do modelo.
 
 ### Architecture Capability Framework
 Guidelines para estabelecer função de EA na organização (governança, competências, ferramentas).

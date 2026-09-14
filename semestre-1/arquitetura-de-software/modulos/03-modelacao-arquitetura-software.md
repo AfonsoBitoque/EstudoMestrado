@@ -1,8 +1,21 @@
 # Módulo 03 — Modelação de Arquitetura de Software
 
+> **Notação EA (negócio + interligação):** [ArchiMate 101](https://archimate-community.pages.opengroup.org/workgroups/archimate-101/) + [guia integrado](../ARCHIMATE-GUIA.md). Este módulo foca **arquitetura de software** (C4, UML, ADRs).
+
 ## Introdução
 
 Modelar arquitecturas permite comunicar decisões, analisar alternativas e preservar conhecimento ao longo do ciclo de vida do sistema. Sem modelos adequados, a arquitectura existe apenas na cabeça de alguns indivíduos — risco enorme para manutenção e evolução. Este módulo aborda o modelo C4, diagramas UML de deployment, Architecture Decision Records (ADRs) e o conceito de views and viewpoints.
+
+### C4 vs ArchiMate (complementares)
+
+| | **C4** (este módulo) | **ArchiMate** (módulos 04–08) |
+|---|---------------------|-------------------------------|
+| Foco | Um sistema software | Enterprise Architecture completa |
+| Camadas | Context → Container → Component | Business → Application → Technology |
+| Quando | Detalhe de software, developers | Alinhar negócio, apps e infra |
+| Ferramenta | draw.io, Structurizr | Archi, Visual Paradigm |
+
+Ver [When (not) using ArchiMate?](https://archimate-community.pages.opengroup.org/workgroups/archimate-101/#_when_not_using_archimate): ArchiMate = fase de **coerência**; C4/UML = fase de **detalhe**.
 
 ## Porque Modelar Arquitecturas?
 

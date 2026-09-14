@@ -1,8 +1,30 @@
 # Módulo 08 — Interligação de Arquiteturas
 
+> **ArchiMate (core da UC):** relações **serving**, **realization**, **flow** · [Part IV — Viewpoints](https://archimate-community.pages.opengroup.org/workgroups/archimate-101/) · [Guia](../ARCHIMATE-GUIA.md) · VP: [Application Cooperation](https://online.visual-paradigm.com/diagrams/tutorials/archimate-tutorial/)
+
 ## Introdução
 
-Interligar arquitecturas significa estabelecer correspondências explícitas entre diferentes níveis de abstracção: processos de negócio, entidades de informação, componentes software e infraestrutura. Sem esta ligação, negócio e TI falam línguas diferentes, projectos desalinhados proliferam e a rastreabilidade de requisitos perde-se. Este módulo foca o mapeamento de processos de negócio para componentes de software e técnicas de interligação entre arquitectura empresarial e arquitectura de solução.
+Interligar arquitecturas significa estabelecer correspondências explícitas entre diferentes níveis de abstracção: processos de negócio, entidades de informação, componentes software e infraestrutura. Sem esta ligação, negócio e TI falam línguas diferentes, projectos desalinhados proliferam e a rastreabilidade de requisitos perde-se. **ArchiMate** é a notação principal para esta interligação (conteúdo C8 da FUC). Este módulo foca o mapeamento de processos de negócio para componentes de software e técnicas de interligação entre arquitectura empresarial e arquitectura de solução.
+
+## Interligação em ArchiMate
+
+```
+Business Process
+       ▲ serving
+Application Service ← realization ─ Application Component
+       ▲ serving
+Technology Service ← running on ───── Node
+```
+
+| Relação | Liga |
+|---------|------|
+| **Serving** | Application Service suporta Business Process |
+| **Realization** | Application Component implementa Application Service |
+| **Assignment** | Role executa Process; Component executa Function |
+| **Flow** | Business Object circula entre processos |
+| **Representation** | Business Object ↔ Data Object (negócio ↔ app) |
+
+**Viewpoint recomendado:** *Application Cooperation* (VP Tutorial) — mostra flows entre Application Components e ligação a Business Processes.
 
 ## Porque Interligar Arquiteturas?
 

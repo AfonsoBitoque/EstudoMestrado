@@ -1,5 +1,7 @@
 # Módulo 05 — Processos de Negócio e Informação
 
+> **ArchiMate:** Business layer — [Part II do ArchiMate 101](https://archimate-community.pages.opengroup.org/workgroups/archimate-101/) · [Guia](../ARCHIMATE-GUIA.md)
+
 ## Introdução
 
 Sistemas de software não existem isoladamente — executam e suportam **processos de negócio** sobre **informação** estruturada e governada. Compreender BPM (Business Process Management), arquitectura de informação e data governance é fundamental para arquitectos que devem alinhar soluções técnicas com a realidade operacional das organizações. Este módulo explora estes três pilares.
@@ -23,6 +25,19 @@ Automatizar uma tarefa (script, RPA) não é BPM completo. BPM abrange a **orque
 ### Relação com Arquitectura de Software
 
 Processos de negócio definem **requisitos operacionais** que a arquitectura deve suportar: quais serviços invocar, em que ordem, com que SLAs, que dados trocar. Mapear processos para componentes software (módulo 08) é passo crítico. Processos mal compreendidos levam a sistemas que automatizam ineficiências ("paving the cow path").
+
+### Elementos ArchiMate — Business layer
+
+| Elemento ArchiMate | Equivalente conceptual | Uso |
+|--------------------|------------------------|-----|
+| **Business Actor** | Organização, departamento | Quem participa |
+| **Business Role** | Papel funcional | Atribuição de responsabilidades |
+| **Business Process** | Processo BPMN (nível overview) | O que acontece |
+| **Business Service** | Serviço exposto ao cliente | O que se oferece externamente |
+| **Business Object** | Entidade de informação | Dados manipulados |
+| **Business Interface** | Canal de interacção | Web, balcão, API de negócio |
+
+Exemplo VP: [Business Actor diagram](https://online.visual-paradigm.com/diagrams/tutorials/archimate-tutorial/) — empresa composta por departamentos, roles assigned to processes.
 
 ## Arquitetura de Informação
 

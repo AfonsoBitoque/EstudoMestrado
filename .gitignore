@@ -9,6 +9,12 @@ f5*.pdf
 plano_*.pdf
 plano-*.pdf
 **/*RSFS*.pdf
+Project*.pdf
+Exercises*.pdf
+Slides*.pdf
+Course_notes*.pdf
+Course notes*.pdf
+**/*Crypto*.pdf
 **/fuc/
 **/*-fuc.*
 

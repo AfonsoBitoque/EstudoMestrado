@@ -1,61 +1,100 @@
 # Roadmap — Criptografia Moderna
 
-**UC:** 14741103 · **ECTS:** 6 · **Língua:** PT ou EN (conforme turma)  
+**UC:** 14741103 · **ECTS:** 6 · **Docente:** Daniel Graça · **Ano:** 2026/27  
 **Pré-requisitos:** Nenhum formal
 
-## Objetivos de aprendizagem (resumo)
+> **Guia principal:** [GUIA-MATERIAIS.md](./GUIA-MATERIAIS.md) — Course notes, Slides, Exercises, Project (PDFs locais)
 
-- Conhecer sistemas criptográficos: sequenciais, por blocos, simétricos e assimétricos
-- Utilizar sistemas criptográficos na prática
-- Reconhecer limitações e ameaças (incl. criptografia quântica)
-- Compreender distribuição de chaves e aplicações (TLS, assinaturas, etc.)
+---
 
-## Percurso de estudo (6–8 semanas)
+## Materiais do professor
 
-### Fase 1 — Fundamentos (Semanas 1–2)
+| Material | Uso | Guia |
+|----------|-----|------|
+| **Course notes.pdf** | Texto de referência (69 p.) | Capítulos 1–7 abaixo |
+| **Slides.pdf** | Aulas (129 slides) | Diagramas, definições |
+| **Exercises.pdf** | 76 exercícios oficiais | [exercicios/INDICE.md](./exercicios/INDICE.md) |
+| **Project.pdf** | Trabalho 70% | [PROJETO.md](./PROJETO.md) |
 
-| Ordem | Módulo | Conteúdo FUC | Tempo sugerido |
-|-------|--------|--------------|----------------|
-| 1 | [01-principios-fundamentais](./modulos/01-principios-fundamentais.md) | Princípios e conceitos | 4–6 h |
-| 2 | [02-tipos-cifras](./modulos/02-tipos-cifras.md) | Tipos de cifras | 5–7 h |
+---
 
-**Checkpoint:** Distinguir confidencialidade, integridade, autenticidade e não-repúdio com exemplos.
+## Percurso alinhado com Course notes
 
-### Fase 2 — Cifras simétricas e assimétricas (Semanas 3–5)
+### Cap. 1 — Introduction (Semanas 1–2)
 
-| Ordem | Módulo | Conteúdo FUC | Tempo sugerido |
-|-------|--------|--------------|----------------|
-| 3 | [03-criptografia-chave-privada](./modulos/03-criptografia-chave-privada.md) | Criptografia simétrica | 6–8 h |
-| 4 | [04-criptografia-chave-publica](./modulos/04-criptografia-chave-publica.md) | Criptografia assimétrica | 6–8 h |
-| 5 | [05-funcoes-dispersao](./modulos/05-funcoes-dispersao.md) | Hash functions | 4–6 h |
+| Ordem | Módulo | Course notes | Exercícios | Slides |
+|-------|--------|--------------|------------|--------|
+| 1 | [01-principios-fundamentais](./modulos/01-principios-fundamentais.md) | §1.1–1.2 Kerckhoffs | 11–21, 20 | p.1–35 |
+| 2 | [02-tipos-cifras](./modulos/02-tipos-cifras.md) | §1.1 história, §1.3 OTP | 1–10, 22–29 | Caesar, Vigenère, OTP |
 
-**Checkpoint:** Implementar AES-GCM e RSA-OAEP com biblioteca (OpenSSL/Python cryptography).
+**Checkpoint:** Explicar Kerckhoffs + decifrar shift cipher (ex. 3–4).
 
-### Fase 3 — Aplicações e ameaças (Semanas 6–8)
+### Cap. 2 — Symmetric encryption (Semanas 3–4)
 
-| Ordem | Módulo | Conteúdo FUC | Tempo sugerido |
-|-------|--------|--------------|----------------|
-| 6 | [06-limitacoes-ameacas-quantica](./modulos/06-limitacoes-ameacas-quantica.md) | Limitações e ameaças | 4–6 h |
-| 7 | [07-distribuicao-chaves-assinaturas](./modulos/07-distribuicao-chaves-assinaturas.md) | PKI, assinaturas, aplicações | 6–8 h |
-| — | [materia-extra.md](./materia-extra.md) | Complementar | Contínuo |
+| Ordem | Módulo | Course notes | Exercícios |
+|-------|--------|--------------|------------|
+| 3 | [03-criptografia-chave-privada](./modulos/03-criptografia-chave-privada.md) | §2.2 DES/AES, §2.2.3 modes | 31–50 |
 
-**Checkpoint final:** Explicar handshake TLS 1.3 e verificar assinatura digital de um documento.
+**Checkpoint:** AES CBC com Python (ex. 39–41) + explicar porquê não ECB.
 
-## Avaliação (referência)
+### Cap. 3–4 — Hashes & MACs (Semana 5)
 
-- **30%** — Teste individual
-- **70%** — Projeto/trabalho com defesa individual
-- Dispensa exame com ≥ 9,5 na avaliação contínua
-- **IA proibida** em testes/exames; permitida como apoio ao estudo
+| Ordem | Módulo | Course notes | Exercícios |
+|-------|--------|--------------|------------|
+| 4 | [05-funcoes-dispersao](./modulos/05-funcoes-dispersao.md) | Cap. 3–4 | 51–65 |
 
-## Ferramentas práticas
+**Checkpoint:** Calcular SHA-256 (ex. 55) + explicar HMAC.
 
-- OpenSSL CLI
-- Python `cryptography` library
-- Wireshark (TLS analysis)
-- GnuPG (PGP)
+### Cap. 5 — Asymmetric (Semana 6)
 
-## Ligações úteis
+| Ordem | Módulo | Course notes | Exercícios |
+|-------|--------|--------------|------------|
+| 5 | [04-criptografia-chave-publica](./modulos/04-criptografia-chave-publica.md) | Cap. 5 RSA/DH/ECC | 66–70, 75 |
 
-- [Cryptopals Challenges](https://cryptopals.com/)
-- [NIST Post-Quantum Cryptography](https://csrc.nist.gov/projects/post-quantum-cryptography)
+**Checkpoint:** Exemplo numérico RSA (ex. 68) e DH (ex. 69).
+
+### Cap. 6–7 — Quantum & PKI (Semanas 7–8)
+
+| Ordem | Módulo | Course notes | Exercícios |
+|-------|--------|--------------|------------|
+| 6 | [06-limitacoes-ameacas-quantica](./modulos/06-limitacoes-ameacas-quantica.md) | Cap. 6 | 71–72, 76 |
+| 7 | [07-distribuicao-chaves-assinaturas](./modulos/07-distribuicao-chaves-assinaturas.md) | Cap. 7 PKI | 73–74 |
+| — | [PROJETO.md](./PROJETO.md) | — | Trabalho 70% |
+| — | [materia-extra.md](./materia-extra.md) | — | Complementar |
+
+**Checkpoint final:** Explicar MITM + implicações quânticas (ex. 75–76).
+
+---
+
+## Exercícios oficiais — soluções
+
+| Ficheiro | Exercícios |
+|----------|------------|
+| [SOLUCOES-01-30.md](./exercicios/SOLUCOES-01-30.md) | Clássicas, OTP, key space |
+| [SOLUCOES-31-50.md](./exercicios/SOLUCOES-31-50.md) | Simétrico, AES, modos |
+| [SOLUCOES-51-76.md](./exercicios/SOLUCOES-51-76.md) | Hash, MAC, assimétrico, quantum |
+
+---
+
+## Avaliação
+
+| Componente | Peso |
+|------------|------|
+| Teste individual | **30%** |
+| Projeto + defesa | **70%** |
+| Exame (opcional) | 30% + 70% projeto |
+
+- Dispensa exame: ≥ **9,5** contínua
+- **IA proibida** em testes/exames
+
+---
+
+## Ferramentas
+
+```bash
+pip install cryptography
+python3 semestre-1/criptografia-moderna/scripts/aes_exercicios.py
+openssl dgst -sha256 file
+```
+
+- OpenSSL CLI · Python `cryptography` · Wireshark (TLS)

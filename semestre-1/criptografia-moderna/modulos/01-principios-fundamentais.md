@@ -1,5 +1,7 @@
 # Módulo 01 — Princípios Fundamentais
 
+> **Materiais UC:** [GUIA-MATERIAIS](../GUIA-MATERIAIS.md) · Course notes cap. 1 · Slides p.1–35 · Exercícios 11–21, 20
+
 **UC:** Criptografia Moderna · **Fase:** 1 — Fundamentos
 
 ## Objetivos de aprendizagem

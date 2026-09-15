@@ -1,7 +1,9 @@
 # Roadmap — Modelação e Integração de Dados
 
-**UC:** 14741095 · **ECTS:** 6 · **Língua:** PT ou EN  
+**UC:** 14741095 · **ECTS:** 6 · **Docente:** Paula Ventura Martins · **Língua:** PT ou EN  
 **Pré-requisitos recomendados:** Bases de Dados, Análise e Modelação de Sistemas, Programação
+
+> **Projetos:** [PROJETOS-P1-P2.md](./PROJETOS-P1-P2.md) · [Painel de prazos](../../projetos-por-fazer/README.md) · [Aula 01 SQL](./aulas/AULA-01-introducao-sql.md)
 
 ## Objetivos de aprendizagem (resumo)
 
@@ -60,6 +62,16 @@
 
 - **90%** — Projetos P1 e P2 (mín. 10 cada), com defesa individual
 - **10%** — Exercícios presenciais (média 0–5)
+
+### Prazos projetos 2026/27
+
+| Marco | Data |
+|-------|------|
+| Proposta | 21 set 2026 |
+| P1 entrega | 16 nov 2026 |
+| P1 apresentação | nov–dez 2026 |
+| P2 entrega | 18 jan 2027 |
+| P2 apresentação | 18–22 jan 2027 |
 
 ## Ferramentas sugeridas
 

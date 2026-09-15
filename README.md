@@ -4,13 +4,21 @@ Repositório pessoal de estudo para o **Mestrado em Engenharia Informática** (U
 
 Documentação **original** de apoio ao estudo — roadmaps, explicações, exercícios com soluções e materia extra por área. **Não contém** ficheiros oficiais da universidade (FUCs, slides, enunciados, etc.).
 
+## Projetos por fazer
+
+Painel de trabalhos avaliados, **ordenados por data limite**:
+
+**[projetos-por-fazer/](./projetos-por-fazer/)**
+
+Envia PDFs de enunciados e eu adiciono resumos + checklists. Próximo prazo: **MID proposta — 21 set 2026**.
+
 ## Semestre 1 (2026/27)
 
 | Disciplina | Código | ECTS | Pasta |
 |------------|--------|------|-------|
 | Arquitetura de Software | 14741096 | 6 | [semestre-1/arquitetura-de-software](./semestre-1/arquitetura-de-software/) ([guia ArchiMate](./semestre-1/arquitetura-de-software/ARCHIMATE-GUIA.md)) |
 | Internet das Coisas | 14741088 | 6 | [semestre-1/internet-das-coisas](./semestre-1/internet-das-coisas/) |
-| Modelação e Integração de Dados | 14741095 | 6 | [semestre-1/modelacao-integracao-dados](./semestre-1/modelacao-integracao-dados/) |
+| Modelação e Integração de Dados | 14741095 | 6 | [semestre-1/modelacao-integracao-dados](./semestre-1/modelacao-integracao-dados/) ([P1/P2](./semestre-1/modelacao-integracao-dados/PROJETOS-P1-P2.md)) |
 | Criptografia Moderna | 14741103 | 6 | [semestre-1/criptografia-moderna](./semestre-1/criptografia-moderna/) ([guia Prof. Graça](./semestre-1/criptografia-moderna/GUIA-MATERIAIS.md)) |
 | Redes Sem Fios e de Sensores | 14741087 | 6 | [semestre-1/redes-sem-fios-sensores](./semestre-1/redes-sem-fios-sensores/) ([plano semanal do docente](./semestre-1/redes-sem-fios-sensores/PLANO-SEMANAL.md)) |
 
